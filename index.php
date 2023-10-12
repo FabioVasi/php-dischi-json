@@ -32,8 +32,24 @@ Al click su un disco, recuperare e mostrare i dati del disco selezionato.
         <main>
             <div class="container">
                 <div class="row">
-                    <div class="col-4 g-5" v-for="(disc, index) in list" :key="disc + index">
-                        <div class="disc card h-100">
+
+                    <div class="dark modal fade" :id="`${disc.author.replace(/\s+/g, '')}${index}`" tabindex="-1" :aria-labelledby="`${disc.author.replace(/\s+/g, '')}${index}Label`" aria-hidden="true" v-for="(disc, index) in list" :key="`${disc.author.replace(/\s+/g, '')}${index}`">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="disc card border-0 h-100 modal-body">
+                                    <img class="img-card-top py-4 px-5" :src="disc.poster" alt="">
+                                    <div class="card-body text-center text-white">
+                                        <h3>{{disc.title}}</h3>
+                                        <p>{{disc.author}}</p>
+                                        <h5>{{disc.year}}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 g-5" v-for="(disc, index) in list" :key="`${disc.author.replace(/\s+/g, '')}${index}`">
+                        <div class="disc card border-0 h-100" data-bs-toggle="modal" :data-bs-target="`#${disc.author.replace(/\s+/g, '')}${index}`" :id="`${disc.author.replace(/\s+/g, '')}${index}`">
                             <img class="img-card-top py-4 px-5" :src="disc.poster" alt="">
                             <div class="card-body text-center text-white">
                                 <h3>{{disc.title}}</h3>

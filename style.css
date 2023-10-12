@@ -30,6 +30,6 @@ svg{
 .disc{
     background-color: #112030;
 }
-.disc:active{
-    background-color: rgba(17, 32, 48, 0.300);
+.dark{
+    background-color: rgba(17, 32, 48, 0.800);
 }
