@@ -6,6 +6,9 @@ createApp({
             
         }
     },
+    methods: {
+        
+    },
     mounted() {
         axios
         .get('server.php')
