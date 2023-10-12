@@ -33,7 +33,7 @@ Al click su un disco, recuperare e mostrare i dati del disco selezionato.
             <div class="container">
                 <div class="row">
                     <div class="col-4 g-5" v-for="(disc, index) in list" :key="disc + index">
-                        <div class="disc card">
+                        <div class="disc card h-100">
                             <img class="img-card-top py-4 px-5" :src="disc.poster" alt="">
                             <div class="card-body text-center text-white">
                                 <h3>{{disc.title}}</h3>
