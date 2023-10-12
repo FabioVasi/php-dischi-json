@@ -3,3 +3,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --bg-header: #06131f;
+    --bg-body: #1d2d3c;
+    --bg-card: #112030;
+    --bg-logo: #18d860;
+}
+body{
+    background-color: #1d2d3c;
+}
+header{
+    background-color: #06131f;
+    height: 80px;
+    padding-left: 3rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+svg{
+    fill: #18d860;
+    font-size: 48px;
+}
+.disc{
+    background-color: #112030;
+}
